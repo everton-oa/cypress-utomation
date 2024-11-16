@@ -25,3 +25,6 @@ This project is built using:
 2. Explore and document advanced Cypress features.  
 3. Practice Git workflows and improve repository management using GitHub.  
 4. Create a reusable resource for future projects.
+
+## Commit patterns
+
