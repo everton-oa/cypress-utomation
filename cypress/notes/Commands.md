@@ -1,4 +1,3 @@
-![cypress](cypress.png)
 # Cypress Command Line 
 
 ***
