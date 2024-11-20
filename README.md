@@ -15,7 +15,9 @@ This repository serves two primary purposes:
 ## Tech Stack
 
 This project is built using:
-- **JavaScript**  
+- **OS: Linux**
+- **IDE: Visual Studio Code**  
+- **Programming language: JavaScript**  
 - **Cypress**  
 - **Git/GitHub**  
 
@@ -27,4 +29,5 @@ This project is built using:
 4. Create a reusable resource for future projects.
 
 ## Commit patterns
+* [Padrões de commits 📜](https://github.com/iuricode/padroes-de-commits) (Lang: PT-BR)
 
