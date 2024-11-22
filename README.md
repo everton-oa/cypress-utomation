@@ -18,7 +18,9 @@ This project is built using:
 - **OS: Linux**
 - **IDE: Visual Studio Code**  
 - **Programming language: JavaScript**  
-- **Cypress**  
+- **Testing framework: Cypress**  
+- **Testing framework: Mocha**
+- **Library: JQuery**
 - **Git/GitHub**  
 
 ## Goals
