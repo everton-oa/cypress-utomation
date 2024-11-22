@@ -3,7 +3,7 @@
 describe("Cypress test", () => {
   it("Test name", () => {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
-    //35 - HANDLING WEB TABLES WITH CYPRESS USING EACH COMMAND
+    //39 - HANDLING MOUSE HOVER USING CYPRESS
 
     cy.get(".mouse-hover-content").invoke("show");
     cy.contains("Top").click();
