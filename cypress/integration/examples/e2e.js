@@ -1,14 +1,19 @@
 /// <reference types="cypress" />
 
 describe("End to end e-commerce Test", () => {
+  before(function () {
+    cy.fixture("example").then(function (data) {
+      globalThis.data = data;
+    });
+  });
+
   it("Submit Order", () => {
+    const productName = globalThis.data.productname;
+
     cy.visit("https://rahulshettyacademy.com/loginpagePractise");
 
-    //47 to 50 - END TO END
-    const productName = "Nokia Edge";
-
-    cy.get("#username").type("rahulshettyacademy");
-    cy.get("#password").type("learning");
+    cy.get("#username").type(globalThis.data.username);
+    cy.get("#password").type(globalThis.data.password);
     cy.get("#signInBtn").click();
     cy.contains("Shop Name").should("be.visible");
     cy.get("app-card").should("have.length", 4);
@@ -31,7 +36,8 @@ describe("End to end e-commerce Test", () => {
       });
     cy.contains("button", "Checkout").click();
     cy.get("#country").type("India");
-    cy.get('.suggestions ul li a').click();
+    cy.pause();
+    cy.get(".suggestions ul li a").click();
     cy.get(".btn-success").click();
     cy.get(".alert-success").should("contain", "Success");
   });
