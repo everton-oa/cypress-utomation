@@ -36,7 +36,6 @@ describe("End to end e-commerce Test", () => {
       });
     cy.contains("button", "Checkout").click();
     cy.get("#country").type("India");
-    cy.pause();
     cy.get(".suggestions ul li a").click();
     cy.get(".btn-success").click();
     cy.get(".alert-success").should("contain", "Success");
