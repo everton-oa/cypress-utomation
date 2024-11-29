@@ -30,7 +30,7 @@ Cypress.Commands.add("submitFormDetails", () => {
   cy.get(".btn-success").click();
 });
 
-Cypress.Commands.add("submitFormDetails", () => {
+Cypress.Commands.add("LoginAPI", () => {
   cy.request("POST", "https://rahulshettyacademy.com/api/ecom/auth/login", {
     userEmail: "everton.oa@gmail.com",
     userPassword: "Everton123*",
