@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
+const neatCsv = require("neat-csv");
 
-describe("Test mocking HTTP response", function () {
+describe("Test mocking HTTP response", async () => {
   it("Test Case", function () {
-    cy.LoginAPI().then(function () {
+    cy.LoginAPI().then(async function () {
       cy.visit("https://rahulshettyacademy.com/client/", {
         onBeforeLoad: function (window) {
           window.localStorage.setItem("token", Cypress.env("token"));
@@ -20,6 +21,12 @@ describe("Test mocking HTTP response", function () {
     });
     cy.get(".action__submit").click();
     cy.wait(2000);
-    cy.get(".order-summary button").click();
+    cy.get(".order-summary button").eq(1).click();
+    cy.readFile(
+      Cypress.config("fileServerFolder") +
+        "cypress/downloads/order-invoice_everton.oa.xlsx"
+    ).then(async (text) => {
+      const csv = await neatCsv(text);
+    });
   });
 });
