@@ -29,3 +29,13 @@ Cypress.Commands.add("submitFormDetails", () => {
   cy.get(".suggestions ul li a").click();
   cy.get(".btn-success").click();
 });
+
+Cypress.Commands.add("LoginAPI", () => {
+  cy.request("POST", "https://rahulshettyacademy.com/api/ecom/auth/login", {
+    userEmail: "everton.oa@gmail.com",
+    userPassword: "Everton123*",
+  }).then(function (response) {
+    expect(response.status).to.equal(200);
+    Cypress.env("token", response.body.token);
+  });
+});
