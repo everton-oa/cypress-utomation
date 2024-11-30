@@ -21,7 +21,9 @@ describe("Test mocking HTTP response", async () => {
     });
     cy.get(".action__submit").click();
     cy.wait(2000);
-    cy.get(".order-summary button").eq(1).click();
+    // cy.get(".order-summary button").eq(1).click();
+    //Selector to find button by text
+    cy.get(".order-summary button").contains("CSV").click();
     cy.readFile(
       Cypress.config("fileServerFolder") +
         "cypress/downloads/order-invoice_everton.oa.xlsx"
