@@ -33,3 +33,6 @@ This project is built using:
 ## Commit patterns
 * [Padrões de commits 📜](https://github.com/iuricode/padroes-de-commits) (Lang: PT-BR)
 
+## Udemy Course
+* Cypress - Modern Automation Testing from Scratch + Frameworks
+* Instructor - Rahul Shetty
